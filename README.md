@@ -396,10 +396,10 @@ and decrypted. Leave this off unless asked for it to fix an issue.
 - **Enabled:** Useful if you want to remove a camera from rtsp without deleting
 it from the config
 
-- **update_time:** Used to FORCE an update on the camera time. Usually it checks
-if it is needed but this
-will force it regardless. (Mostly this was introduced to address a specific
-ssue a user had)
+- **update_time:** At each connect neolink reads the camera clock and logs it.
+With `true` it also sets the camera clock to this computer's time. With
+`false`, the default, it never writes the camera clock, even when the camera
+has no time set.
 
 - **print_format:** Used for adjusting printing of some values mostly, battery
 messages
